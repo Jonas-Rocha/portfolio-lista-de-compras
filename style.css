@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* <weight>: Use a value from 100 to 900
+<uniquifier>: Use a unique and descriptive class name */
+
+.inter-custom-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --color-brand: #ca3884;
+  --color-brand-hover: #a52c6b;
+  --color-danger: #c93847;
+  --content-primary: #080b12;
+  --content-secondary: #374151;
+  --content-tertiary: #9ca3af;
+  --always-white: #ffffff;
+  --border-primary: #d1d5db;
+  --border-hover: #b9c2d0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 327px;
+  height: 100%;
+
+  margin-top: 34px;
+}
+
+form {
+  width: 100%;
+}
+
+#back {
+  justify-content: center;
+  align-items: center;
+  align-self: self-start;
+  margin-bottom: 16px;
+}
+
+/* estiliza o link "voltar" no topo da página */
+.back-link {
+  color: var(--color-brand);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* estiliza a seta em SVG no topo da página */
+.back-link svg {
+  fill: var(--color-brand);
+  margin-right: 3px;
+}
+
+#title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 44px;
+  color: var(--content-primary);
+}
+
+#addnewitem {
+  width: 100%;
+  border-radius: 12px;
+  height: 44px;
+  margin-bottom: 16px;
+  border-style: none;
+  padding-left: 18px;
+}
+
+#addnewitem:focus {
+  outline: none;
+  border: none; /* opcional: remove a borda também, se quiser */
+  box-shadow: none; /* remove qualquer sombra azul do Chrome */
+}
+
+#addnewitem::placeholder {
+  color: var(--content-tertiary);
+}
+
+#addnewitem-button {
+  width: 100%;
+  border-radius: 12px;
+  height: 44px;
+  margin-bottom: 40px;
+  background-color: var(--color-brand);
+  color: var(--always-white);
+  border-style: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
