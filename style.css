@@ -114,3 +114,40 @@ form {
   font-size: 16px;
   line-height: 20px;
 }
+
+.checkbox-div {
+  height: 57px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#item {
+  appearance: none; /* Remove o estilo padrão */
+  -webkit-appearance: none; /* Suporte para navegadores WebKit */
+  margin-right: 12px;
+  color: var(--content-secondary);
+  border-radius: 6px;
+  height: 16px;
+  width: 16px;
+  border: 2px solid var(--border-primary); /* Define uma borda visível */
+  background-color: white; /* Cor de fundo quando não marcado */
+  cursor: pointer;
+}
+
+#check-box:checked {
+  background-color: #2196f3; /* Cor de fundo quando marcado */
+}
+
+#item > label {
+  font-family: "Inter";
+}
+
+.label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
