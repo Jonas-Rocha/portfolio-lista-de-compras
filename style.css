@@ -37,10 +37,11 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 327px;
+  max-width: 327px;
   height: 100%;
   color: #f2f4fa;
   margin-top: 34px;
+  padding: 10px;
 }
 
 form {
