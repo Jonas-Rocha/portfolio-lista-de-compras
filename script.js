@@ -8,13 +8,13 @@ input.addEventListener("input", () => {
   value = input.value;
 });
 
-button.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
-
+  if (input.value.trim() === "") return;
   const clone = checkboxdiv.cloneNode(true);
-
   const label = clone.querySelector(".label");
-  label.textContent = value;
+  label.textContent = input.value;
 
   form.appendChild(clone);
+  input.value = "";
 });
