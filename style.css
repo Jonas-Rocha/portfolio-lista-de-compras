@@ -55,7 +55,6 @@ form {
   margin-bottom: 16px;
 }
 
-/* estiliza o link "voltar" no topo da página */
 .back-link {
   color: var(--color-brand);
   text-decoration: none;
@@ -68,7 +67,11 @@ form {
   line-height: 16px;
 }
 
-/* estiliza a seta em SVG no topo da página */
+.back-link:hover {
+  color: var(--color-brand-hover);
+  transition: 1s;
+}
+
 .back-link svg {
   fill: var(--color-brand);
   margin-right: 3px;
@@ -95,8 +98,8 @@ form {
 
 #addnewitem:focus {
   outline: none;
-  border: none; /* opcional: remove a borda também, se quiser */
-  box-shadow: none; /* remove qualquer sombra azul do Chrome */
+  border: none;
+  box-shadow: none;
 }
 
 #addnewitem::placeholder {
@@ -116,6 +119,12 @@ form {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
+}
+
+#addnewitem-button:hover {
+  background-color: var(--color-brand-hover);
+  transition: 1s;
 }
 
 .checkbox-div {
@@ -128,7 +137,7 @@ form {
   background-color: var(--always-white);
 }
 
-#item {
+.item {
   appearance: none; /* Remove o estilo padrão */
   -webkit-appearance: none; /* Suporte para navegadores WebKit */
   margin-right: 12px;
@@ -136,18 +145,18 @@ form {
   border-radius: 6px;
   height: 16px;
   width: 16px;
-  border: 2px solid var(--border-primary); /* Define uma borda visível */
-  background-color: white; /* Cor de fundo quando não marcado */
+  border: 2px solid var(--border-primary);
+  background-color: white;
   cursor: pointer;
   justify-content: center;
   align-items: center;
 }
 
-#item:checked {
+.item:checked {
   background-color: #2196f3;
 }
 
-#item > label {
+.item > label {
   font-family: "Inter";
 }
 
@@ -160,7 +169,7 @@ form {
   line-height: 24px;
 }
 
-#div-checkbox {
+.div-checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +177,7 @@ form {
   height: 100%;
 }
 
-#div-label {
+.div-label {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -176,7 +185,7 @@ form {
   height: 100%;
 }
 
-#div-svg {
+.div-svg {
   width: 32px;
   height: 32px;
   margin-right: 12.5px;
