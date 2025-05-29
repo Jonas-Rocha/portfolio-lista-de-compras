@@ -190,3 +190,7 @@ form {
   height: 32px;
   margin-right: 12.5px;
 }
+
+.trash-icon {
+  cursor: pointer;
+}

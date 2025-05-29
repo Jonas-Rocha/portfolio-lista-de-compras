@@ -14,7 +14,16 @@ form.addEventListener("submit", (event) => {
   const clone = checkboxdiv.cloneNode(true);
   const label = clone.querySelector(".label");
   label.textContent = input.value;
-
+  clone.id = `${input.value}`;
+  // console.log(clone.children[2]);
+  clone.style.display = "flex";
   form.appendChild(clone);
   input.value = "";
+  console.log(clone.children);
+  // clone.addEventListener("click", (event) => {
+  //   console.log(event);
+  // });
 });
+
+
+
