@@ -2,6 +2,7 @@ const input = document.getElementById("addnewitem");
 const form = document.querySelector("form");
 const button = document.getElementById("addnewitem-button");
 const checkboxdiv = document.querySelector(".checkbox-div");
+const removeitens = document.querySelector(".remove-itens");
 
 let value = "";
 input.addEventListener("input", () => {
@@ -17,13 +18,20 @@ form.addEventListener("submit", (event) => {
   clone.id = `${input.value}`;
   // console.log(clone.children[2]);
   clone.style.display = "flex";
+  clone.classList.add("clones");
   form.appendChild(clone);
   input.value = "";
-  console.log(clone.children);
-  // clone.addEventListener("click", (event) => {
-  //   console.log(event);
-  // });
+  clone.children[2].addEventListener("click", () => {
+    clone.remove();
+  });
 });
 
-
-
+removeitens.addEventListener("click", () => {
+  let clones = document.querySelectorAll(".clones");
+  for (let i = 0; i < clones.length; i++) {
+    clones[i].remove();
+  }
+  setTimeout(() => {
+    alert("Todos os itens removidos!");
+  }, 10);
+});

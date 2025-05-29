@@ -106,7 +106,8 @@ form {
   color: var(--content-tertiary);
 }
 
-#addnewitem-button {
+#addnewitem-button,
+.remove-itens {
   width: 100%;
   border-radius: 12px;
   height: 44px;
@@ -135,6 +136,7 @@ form {
   margin-bottom: 12px;
   border-radius: 12px;
   background-color: var(--always-white);
+  display: none;
 }
 
 .item {
@@ -193,4 +195,25 @@ form {
 
 .trash-icon {
   cursor: pointer;
+}
+
+.remove-itens {
+  background-color: var(--color-danger) !important;
+}
+
+.alert-box {
+  background-color: var(--color-danger);
+  width: 100%;
+  border-radius: 12px;
+  height: 44px;
+  color: var(--always-white);
+  border-style: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
