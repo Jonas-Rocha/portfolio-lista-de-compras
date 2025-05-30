@@ -47,7 +47,7 @@ removeitens.addEventListener("click", () => {
   for (let i = 0; i < clones.length; i++) {
     clones[i].remove();
   }
-  let showTimeout = setTimeout(() => {
+  setTimeout(() => {
     const trashicondelete =
       document.getElementsByClassName("trash-icon-delete")[0];
     const alertboxpopup = document.getElementsByClassName("alert-box-popup")[0];
@@ -55,14 +55,11 @@ removeitens.addEventListener("click", () => {
     trashicondelete.textContent = "Todos os itens foram excluidos!";
   }, 100);
 
-  if (showTimeout) {
-    setTimeout(() => {
-      const trashicondelete =
-        document.getElementsByClassName("trash-icon-delete")[0];
-      const alertboxpopup =
-        document.getElementsByClassName("alert-box-popup")[0];
-      alertboxpopup.classList.remove("alert-box-display");
-      trashicondelete.textContent = "Todos os itens foram excluidos!";
-    }, 1000);
-  }
+  setTimeout(() => {
+    const trashicondelete =
+      document.getElementsByClassName("trash-icon-delete")[0];
+    const alertboxpopup = document.getElementsByClassName("alert-box-popup")[0];
+    alertboxpopup.classList.remove("alert-box-display");
+    trashicondelete.textContent = "Todos os itens foram excluidos!";
+  }, 1000);
 });
