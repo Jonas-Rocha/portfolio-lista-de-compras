@@ -203,9 +203,8 @@ form {
 
 .alert-box {
   background-color: var(--color-danger);
-  width: 100%;
   border-radius: 12px;
-  height: 44px;
+  height: 33px;
   color: var(--always-white);
   border-style: none;
   font-family: "Inter";
@@ -216,4 +215,17 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px;
+  opacity: 70%;
+}
+
+.alert-box-popup {
+  max-width: 327px;
+  position: absolute;
+  bottom: 92%;
+  display: none;
+}
+
+.alert-box-display {
+  display: block;
 }

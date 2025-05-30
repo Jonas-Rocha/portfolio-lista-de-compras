@@ -23,6 +23,22 @@ form.addEventListener("submit", (event) => {
   input.value = "";
   clone.children[2].addEventListener("click", () => {
     clone.remove();
+    let showTimeout = setTimeout(() => {
+      const trashicondelete =
+        document.getElementsByClassName("trash-icon-delete")[0];
+      const alertboxpopup =
+        document.getElementsByClassName("alert-box-popup")[0];
+      alertboxpopup.classList.add("alert-box-display");
+      trashicondelete.textContent = "Item excluído!";
+    }, 100);
+
+    if (showTimeout) {
+      setTimeout(() => {
+        const alertboxpopup =
+          document.getElementsByClassName("alert-box-popup")[0];
+        alertboxpopup.classList.remove("alert-box-display");
+      }, 1000);
+    }
   });
 });
 
@@ -31,7 +47,16 @@ removeitens.addEventListener("click", () => {
   for (let i = 0; i < clones.length; i++) {
     clones[i].remove();
   }
-  setTimeout(() => {
-    alert("Todos os itens removidos!");
-  }, 10);
+  let showTimeout = setTimeout(() => {
+    const alertboxpopup = document.getElementsByClassName("alert-box-popup")[0];
+    alertboxpopup.classList.add("alert-box-display");
+  }, 100);
+
+  if (showTimeout) {
+    setTimeout(() => {
+      const alertboxpopup =
+        document.getElementsByClassName("alert-box-popup")[0];
+      alertboxpopup.classList.remove("alert-box-display");
+    }, 1000);
+  }
 });
