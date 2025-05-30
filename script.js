@@ -48,15 +48,21 @@ removeitens.addEventListener("click", () => {
     clones[i].remove();
   }
   let showTimeout = setTimeout(() => {
+    const trashicondelete =
+      document.getElementsByClassName("trash-icon-delete")[0];
     const alertboxpopup = document.getElementsByClassName("alert-box-popup")[0];
     alertboxpopup.classList.add("alert-box-display");
+    trashicondelete.textContent = "Todos os itens foram excluidos!";
   }, 100);
 
   if (showTimeout) {
     setTimeout(() => {
+      const trashicondelete =
+        document.getElementsByClassName("trash-icon-delete")[0];
       const alertboxpopup =
         document.getElementsByClassName("alert-box-popup")[0];
       alertboxpopup.classList.remove("alert-box-display");
+      trashicondelete.textContent = "Todos os itens foram excluidos!";
     }, 1000);
   }
 });
